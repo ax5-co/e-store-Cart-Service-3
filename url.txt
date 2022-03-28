@@ -1,0 +1,468 @@
+To POST a hard-coded test product (generally, a method for setting the database)
+http://localhost:8080/api/cat/test-product
+
+all product list 
+http://localhost:8080/api/cat/products?page=1&size=2
+
+
+all New products
+http://localhost:8080/api/cat/products/new?page=0&size=2
+
+
+Featured products
+http://localhost:8080/api/cat/products/featured?page=0&size=1
+
+
+products per category
+http://localhost:8080/api/cat/products/category-id/1?size=20
+http://localhost:8080/api/cat/products/category-name/v-neck?size=20
+
+
+products per brand
+http://localhost:8080/api/cat/products/brand-name/polo?size=20
+
+
+all product list sorted bt price (low, high)
+http://localhost:8080/api/cat/products/sort-by/price/low
+http://localhost:8080/api/cat/products/sort-by/price/high
+
+
+all products + different sorting
+http://localhost:8080/api/cat/products/?page=1&size=2&sort=category_id,asc&sort=id,desc
+
+
+display brand's image
+http://localhost:8080/api/cat/brands/1/bannerImage
+http://localhost:8080/api/cat/categories/1/bannerImage
+http://localhost:8080/api/cat/products/1/image
+
+Product JSON (image ignored):
+{
+    "totalItems": 4,
+    "totalPages": 2,
+    "currentPage": 0,
+    "products": [
+        {
+            "id": 1,
+            "title": "Nautica Men  Short Sleeve Solid Crew Neck T-Shirt ",
+            "description": "Nautica Men Short Sleeve Solid Crew Neck T-Shirt RED",
+            "color": "Red",
+            "price": 3.00,
+            "metaTitle": "Nautica Men Short Sleeve Solid Crew Neck T-Shirt ",
+            "slug": null,
+            "createdAt": null,
+            "updatedAt": null,
+            "category": {
+                "id": 6,
+                "title": "T-shirts",
+                "metaTitle": "T-shirts",
+                "description": "T-shirts"
+            },
+            "tags": [
+                {
+                    "id": 1,
+                    "title": "short-sleeve",
+                    "metaTitle": "short-sleeve",
+                    "slug": null,
+                    "description": "short-sleeve"
+                },
+                {
+                    "id": 2,
+                    "title": "long-sleeve",
+                    "metaTitle": "long-sleeve",
+                    "slug": null,
+                    "description": "long-sleeve"
+                }
+            ],
+            "brand": {
+                "id": 1,
+                "title": "Nautica",
+                "metaTitle": "Nautica brand",
+                "description": "\tNautica brand",
+                "products": []
+            },
+            "productVariant": [
+                {
+                    "id": 3,
+                    "size": "L",
+                    "sku": "12",
+                    "stockQuantity": 3
+                },
+                {
+                    "id": 2,
+                    "size": "M",
+                    "sku": "11",
+                    "stockQuantity": 20
+                },
+                {
+                    "id": 4,
+                    "size": "XL",
+                    "sku": "13",
+                    "stockQuantity": 100
+                },
+                {
+                    "id": 1,
+                    "size": "S",
+                    "sku": null,
+                    "stockQuantity": 50
+                }
+            ],
+            "active": true,
+            "new": true,
+            "featured": true
+        },
+        {
+            "id": 2,
+            "title": "Nautica Men  Short Sleeve Solid Crew Neck T-Shirt ",
+            "description": "Nautica Men Short Sleeve Solid Crew Neck T-Shirt BLACK",
+            "color": "Black",
+            "price": 3.00,
+            "metaTitle": "Nautica Men Short Sleeve Solid Crew Neck T-Shirt ",
+            "slug": null,
+            "createdAt": null,
+            "updatedAt": null,
+            "category": {
+                "id": 6,
+                "title": "T-shirts",
+                "metaTitle": "T-shirts",
+                "description": "T-shirts"
+            },
+            "tags": [],
+            "brand": {
+                "id": 1,
+                "title": "Nautica",
+                "metaTitle": "Nautica brand",
+                "description": "\tNautica brand",
+                "products": []
+            },
+            "productVariant": [
+                {
+                    "id": 6,
+                    "size": "M",
+                    "sku": "22",
+                    "stockQuantity": 300
+                },
+                {
+                    "id": 5,
+                    "size": "S",
+                    "sku": "21",
+                    "stockQuantity": 100
+                }
+            ],
+            "active": true,
+            "new": true,
+            "featured": true
+        },
+        {
+            "id": 3,
+            "title": "JEKAOYI Button Down Short Sleeve Linen Shirt for Men Summer Casual Cotton Spread Collar Tops",
+            "description": "JEKAOYI Button Down Short Sleeve Linen Shirt for Men Summer Casual Cotton Spread Collar Tops BEIGE",
+            "color": "Beige",
+            "price": 5.00,
+            "metaTitle": "JEKAOYI Button Down Short Sleeve Linen Shirt for Men Summer Casual Cotton Spread Collar Tops",
+            "slug": null,
+            "createdAt": null,
+            "updatedAt": null,
+            "category": {
+                "id": 2,
+                "title": "Button-down",
+                "metaTitle": "Button-down",
+                "description": "Button-down"
+            },
+            "tags": [
+                {
+                    "id": 1,
+                    "title": "short-sleeve",
+                    "metaTitle": "short-sleeve",
+                    "slug": null,
+                    "description": "short-sleeve"
+                },
+                {
+                    "id": 2,
+                    "title": "long-sleeve",
+                    "metaTitle": "long-sleeve",
+                    "slug": null,
+                    "description": "long-sleeve"
+                }
+            ],
+            "brand": {
+                "id": 2,
+                "title": "JEKAOY",
+                "metaTitle": "JEKAOY brand",
+                "description": "JEKAOY brand",
+                "products": []
+            },
+            "productVariant": [
+                {
+                    "id": 9,
+                    "size": "L",
+                    "sku": "33",
+                    "stockQuantity": 300
+                },
+                {
+                    "id": 7,
+                    "size": "S",
+                    "sku": "31",
+                    "stockQuantity": 50
+                },
+                {
+                    "id": 8,
+                    "size": "M",
+                    "sku": "32",
+                    "stockQuantity": 80
+                },
+                {
+                    "id": 10,
+                    "size": "XL",
+                    "sku": "34",
+                    "stockQuantity": 50
+                }
+            ],
+            "active": true,
+            "new": true,
+            "featured": true
+        }
+    ]
+}
+Signup POST:
+http://localhost:8080/api/auth/signup
+{
+	"email": "user4@user.com",
+	"userName": "user4",
+	"password": "password",
+	"firstName": "user4first",
+	"lastName": "user4last"
+}
+	
+Login POST:
+http://localhost:8080/api/auth/login	
+{
+	"username": "user1",
+	"password": "password"
+}
+
+user1 login result:
+
+{
+    "authenticationToken": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYzMDU3MzQwMn0.E3EDu7S2jfsqd3G-hPKcoznbJzYpW1RdatySgQOb8DXN9PliixYYGC43kYstNm_PeBfTmgeUtwfj-8prm9SQz6DpDPQTyRZnwayNlDOuag83P5sFPACtut78OdpfLRvkp1QXWP24CB35yWJIWJXoYFfxUTavMbwwCEmSf6M2Ky8-0KrkMB_WMo1Vs3KcfcU2DWYYsSy5TURkcxMjC5gry81Ny8ykKkHqaFSD3TKIlyy3Ien80VLzgHXvp5NArHKSEkFlwL4TD8HY7XRGuRl85gyI9dilGzYDAqw0B_FJLJIXMH_rDiQc2UPRxhPQ_T_2WLXYQjERraHxyI1NbQX2jQ",
+    "refreshToken": "125173c6-6ca8-477f-b9b4-0a350792b68c",
+    "expiresAt": "2021-09-02T09:03:22.635761900Z",
+    "userName": "user1"
+}  "userName": "user1"
+
+
+to logout POST 
+http://localhost:8080/api/auth/logout
+{
+	"refreshToken": "4726f49d-2eea-4a3d-8619-6c133acb78ff",
+	"username": "user1"
+}
+
+
+}
+
+to refresh POST 
+http://localhost:8080/api/auth/refresh/token
+{
+	"refreshToken": "4726f49d-2eea-4a3d-8619-6c133acb78ff",
+	"username": "user7"
+}	
+
+http://localhost:8080/api/cart/item/  (POST)(logged in)
+{
+	"productName": "Nautica Men  Short Sleeve Solid Crew Neck T-Shirt",
+	"productColor": "Black",
+	"productVariantSize": "XS",
+	"quantity": 2
+}
+
+PUT update cart item quantity: {cartItem uuid}/quantity/{newQuantity}
+http://localhost:8080/api/cart/item/22114742-3248-41a3-9a91-8f0f6b72353c/quantity/2
+
+get all available payement methods: (logged in with valid jwt)
+http://localhost:8080/api/payment/methods/
+
+
+GET cart (show all cart items, cart UUID, cart Total)
+http://localhost:8080/api/cart/  
+{
+    "cartTotal": 16.00,
+    "totalItems": 3,
+    "cartUUID": "fff601de-090f-4c44-a788-283d7d7a2d57",
+    "totalPages": 1,
+    "cartItems": [
+        {
+            "productName": "Nautica Men  Short Sleeve Solid Crew Neck T-Shirt",
+            "productColor": "Red",
+            "prodictvariantSize": "L",
+            "quantity": 2,
+            "unitPrice": 3.00,
+            "uuid": "22114742-3248-41a3-9a91-8f0f6b72353c",
+            "available": true
+        },
+        {
+            "productName": "JEKAOYI Button Down Short Sleeve Linen Shirt for Men Summer Casual Cotton Spread Collar Tops",
+            "productColor": "Blue",
+            "prodictvariantSize": "L",
+            "quantity": 1000,
+            "unitPrice": 5.00,
+            "uuid": "43f7adce-e9ce-414a-a119-943a28f46afd",
+            "available": false
+        },
+        {
+            "productName": "JEKAOYI Button Down Short Sleeve Linen Shirt for Men Summer Casual Cotton Spread Collar Tops",
+            "productColor": "Beige",
+            "prodictvariantSize": "S",
+            "quantity": 2,
+            "unitPrice": 5.00,
+            "uuid": "f941e582-bc06-4c49-afb9-4a53358745c1",
+            "available": true
+        }
+    ],
+    "currentPage": 0
+}
+
+POST 
+http://localhost:8080/api/addresses/
+Address request:
+{
+	"title": "home",
+	
+	"governorate": "Hawally",
+
+	"area": "Jabriya",
+	
+	"block": 2,
+	
+	"street": "Othman",
+	
+	"building": "bla bla",
+	
+	"floor": 2,
+	
+	"apartment": 0,
+	
+	"notes": "the bla bla villa, second floor"
+}
+
+{
+	"title": "office",
+	
+	"governorate": "Hawally",
+
+	"area": "Hawally",
+	
+	"block": 2,
+	
+	"street": "Ibn Khaldon",
+	
+	"building": "Abraj Complex",
+	
+	"floor": 4,
+	
+	"apartment": 0,
+	
+	"notes": "ask for areej in the IT department, Floor 4 of Abraj Complex near dawar Al Kurd"
+}
+payment methods:
+GET http://localhost:8080/api/payment/methods/
+GET http://localhost:8080/api/payment/methods/names
+GET http://localhost:8080/api/payment/methods/Cash on delivery/fees
+
+Order checkout details:
+cart Uuid: "fff601de-090f-4c44-a788-283d7d7a2d57"
+address Id: 2
+payment Method Name: "Cash on Delivery"
+
+Preview Order:
+http://localhost:8080/api/order/order-preview/fff601de-090f-4c44-a788-283d7d7a2d57/2/Cash on Delivery
+
+Checkout cart to order:
+http://localhost:8080/api/order/checkout/cartUUID/2/Cash on Delivery
+
+
+To use myFatoorah 
+
+***(optional) get payment methods with charges: ***
+POST 
+https://apitest.myfatoorah.com/v2/InitiatePayment
+Header:
+Authorization : Bearer rLtt6JWvbUHDDhsZnfpAhpYk4dxYDQkbcPTyGaKp2TYqQgG7FGZ5Th_WD53Oq8Ebz6A53njUoo1w3pjU1D4vs_ZMqFiz_j0urb_BH9Oq9VZoKFoJEDAbRZepGcQanImyYrry7Kt6MnMdgfG5jn4HngWoRdKduNNyP4kzcp3mRv7x00ahkm9LAK7ZRieg7k1PDAnBIOG3EyVSJ5kK4WLMvYr7sCwHbHcu4A5WwelxYK0GMJy37bNAarSJDFQsJ2ZvJjvMDmfWwDVFEVe_5tOomfVNt6bOg9mexbGjMrnHBnKnZR1vQbBtQieDlQepzTZMuQrSuKn-t5XZM7V6fCW7oP-uXGX-sMOajeX65JOf6XVpk29DP6ro8WTAflCDANC193yof8-f5_EYY-3hXhJj7RBXmizDpneEQDSaSz5sFk0sV5qPcARJ9zGG73vuGFyenjPPmtDtXtpx35A-BVcOSBYVIWe9kndG3nclfefjKEuZ3m4jL9Gg1h2JBvmXSMYiZtp9MR5I6pvbvylU_PP5xJFSjVTIz7IQSjcVGO41npnwIxRXNRxFOdIUHn0tjQ-7LwvEcTXyPsHXcMD8WtgBh-wxR8aKX7WPSsT1O8d8reb2aR7K3rkV3K82K_0OgawImEpwSvp9MNKynEAJQS6ZHe_J_l77652xwPNxMRTMASk1ZsJL
+Body: (use the correct InvoiceAmount to get correct ServiceCharges in response if will deduct it from customer)
+{
+  "InvoiceAmount": 100,
+  "CurrencyIso": "KWD"
+}
+From it we get the response with stuff like:
+{
+                "PaymentMethodId": 1,
+                "PaymentMethodAr": "كي نت",
+                "PaymentMethodEn": "KNET",
+                "PaymentMethodCode": "kn",
+                "IsDirectPayment": false,
+                "ServiceCharge": 2.0,
+                "TotalAmount": 100.0,
+                "CurrencyIso": "KWD",
+                "ImageUrl": "https://demo.myfatoorah.com/imgs/payment-methods/kn.png"
+            },
+from the whole response we get k-net PaymentMethodId = 1, VISA/Master PaymentMethodId = 2 which is enough for our use
+
+*** (The main usage) get payment link with the specified method (K-net or VISA/MASTER) **** 
+POST
+https://apitest.myfatoorah.com/v2/ExecutePayment
+Header:
+Authorization : Bearer rLtt6JWvbUHDDhsZnfpAhpYk4dxYDQkbcPTyGaKp2TYqQgG7FGZ5Th_WD53Oq8Ebz6A53njUoo1w3pjU1D4vs_ZMqFiz_j0urb_BH9Oq9VZoKFoJEDAbRZepGcQanImyYrry7Kt6MnMdgfG5jn4HngWoRdKduNNyP4kzcp3mRv7x00ahkm9LAK7ZRieg7k1PDAnBIOG3EyVSJ5kK4WLMvYr7sCwHbHcu4A5WwelxYK0GMJy37bNAarSJDFQsJ2ZvJjvMDmfWwDVFEVe_5tOomfVNt6bOg9mexbGjMrnHBnKnZR1vQbBtQieDlQepzTZMuQrSuKn-t5XZM7V6fCW7oP-uXGX-sMOajeX65JOf6XVpk29DP6ro8WTAflCDANC193yof8-f5_EYY-3hXhJj7RBXmizDpneEQDSaSz5sFk0sV5qPcARJ9zGG73vuGFyenjPPmtDtXtpx35A-BVcOSBYVIWe9kndG3nclfefjKEuZ3m4jL9Gg1h2JBvmXSMYiZtp9MR5I6pvbvylU_PP5xJFSjVTIz7IQSjcVGO41npnwIxRXNRxFOdIUHn0tjQ-7LwvEcTXyPsHXcMD8WtgBh-wxR8aKX7WPSsT1O8d8reb2aR7K3rkV3K82K_0OgawImEpwSvp9MNKynEAJQS6ZHe_J_l77652xwPNxMRTMASk1ZsJL
+Body:
+[The only REQUIRED parameters in here are: InvoiceValue & PaymentMethodId]
+{
+   "PaymentMethodId":1,
+   "CustomerName":"fname lname",
+   "DisplayCurrencyIso":"KWD",
+   "MobileCountryCode":"965",
+   "CustomerMobile":"12345678",
+   "CustomerEmail":"mail@company.com",
+   "InvoiceValue":10,
+   "CallBackUrl":"https://yoursite.com/success",
+   "ErrorUrl":"https://yoursite.com/error",
+   "Language":"ar",
+   "CustomerAddress":{
+      "Block":"string",
+      "Street":"string",
+      "HouseBuildingNo":"string",
+      "AddressInstructions":"string"
+   }
+}
+From it, we get response like:
+{
+    "IsSuccess": true,
+    "Message": "Invoice Created Successfully!",
+    "ValidationErrors": null,
+    "Data": {
+        "InvoiceId": 967326,
+        "IsDirectPayment": false,
+        "PaymentURL": "https://demo.MyFatoorah.com/Ar/KWT/PayInvoice/Checkout?invoiceKey=0106296732637&paymentGatewayId=20",
+        "CustomerReference": null,
+        "UserDefinedField": null,
+        "RecurringId": ""
+    }
+}
+
+*** to check the status of a payment (Payment Inquiry) ****
+POST
+https://apitest.myfatoorah.com/v2/GetPaymentStatus
+Header:
+Authorization : Bearer rLtt6JWvbUHDDhsZnfpAhpYk4dxYDQkbcPTyGaKp2TYqQgG7FGZ5Th_WD53Oq8Ebz6A53njUoo1w3pjU1D4vs_ZMqFiz_j0urb_BH9Oq9VZoKFoJEDAbRZepGcQanImyYrry7Kt6MnMdgfG5jn4HngWoRdKduNNyP4kzcp3mRv7x00ahkm9LAK7ZRieg7k1PDAnBIOG3EyVSJ5kK4WLMvYr7sCwHbHcu4A5WwelxYK0GMJy37bNAarSJDFQsJ2ZvJjvMDmfWwDVFEVe_5tOomfVNt6bOg9mexbGjMrnHBnKnZR1vQbBtQieDlQepzTZMuQrSuKn-t5XZM7V6fCW7oP-uXGX-sMOajeX65JOf6XVpk29DP6ro8WTAflCDANC193yof8-f5_EYY-3hXhJj7RBXmizDpneEQDSaSz5sFk0sV5qPcARJ9zGG73vuGFyenjPPmtDtXtpx35A-BVcOSBYVIWe9kndG3nclfefjKEuZ3m4jL9Gg1h2JBvmXSMYiZtp9MR5I6pvbvylU_PP5xJFSjVTIz7IQSjcVGO41npnwIxRXNRxFOdIUHn0tjQ-7LwvEcTXyPsHXcMD8WtgBh-wxR8aKX7WPSsT1O8d8reb2aR7K3rkV3K82K_0OgawImEpwSvp9MNKynEAJQS6ZHe_J_l77652xwPNxMRTMASk1ZsJL
+Body:
+(preferred: PaymentId):
+{
+  "Key": "100202120965964751",
+  "KeyType": "PaymentId"
+}
+Or (not preferred: invoiceid)
+{
+  "Key": "32090",
+  "KeyType": "invoiceid"
+} 
+
+to pay (be a logged in user, not a must to own that order you're paying)
+http://localhost:8080/api/payment/pay/{orderNumber}/{PaymentMethodId}
